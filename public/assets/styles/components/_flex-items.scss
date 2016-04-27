@@ -1,0 +1,18 @@
+.flex-container{
+  display: flex;
+  flex-flow: wrap;
+  text-align: center;
+  &__item{
+    width: 100%;
+    padding: 1em;
+    @include break(sm) {
+      width: 50%;
+    }
+    @include break(lg) {
+      width: 33%;
+    }
+    @include break(xl) {
+      width: 25%;
+    }
+  }
+}
