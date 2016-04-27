@@ -1,16 +1,1 @@
-.u-clear{
-  clear:both;
-}
-.u-pull-right{
-  float:right;
-}
-.u-pull-left{
-  float: left;
-}
-.u-position-bottom{
-  position: absolute;
-  bottom: 0;
-}
-.u-center-text{
-  text-align: center;
-}
+@import './_basic_utils.scss';
