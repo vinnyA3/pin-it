@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <base href="/">
+      <title>We Are Your Friends</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+   </head>
+   <body ng-controller="testController as test">
+      <div class="container">
+         <header>
+            <div class="nav">
+               <div class="nav__brand u-pull-left">
+                  <a ui-sref="home">Cool</a>
+               </div>
+               <div class="nav__hamburger u-pull-right">
+                 <i class="fa fa-bars"></i>
+               </div>
+               <ul class="menu">
+                  <li class="menu__item">
+                     <a class="menu__link">Sign Up</a>
+                  </li>
+                  <li class="menu__item">
+                     <a class="menu__link">Login</a>
+                  </li>
+                  <li class="menu__item">
+                     <a ui-sref="logged-in-user-page" class="menu__link">Item 1</a>
+                  </li>
+               </ul>
+            </div><!--end nav-->
+         </header><!--end header-->
+         <!--UI VIEW/ Content-->
+         <div class="content" ui-view></div>
+         <!--end content-->
+         <footer class="u-position-bottom">
+           <p>This is some text</p>
+         </footer>
+      </div><!--end container-->
+      <script src="/public/assets/js/bundle.js"></script>
+   </body>
+</html>

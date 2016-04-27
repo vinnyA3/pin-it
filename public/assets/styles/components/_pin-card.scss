@@ -1,0 +1,62 @@
+/*pin card*/
+.pin-card{
+  display: inline-block;
+  margin-right: 1em;
+  position: relative;
+  width: 250px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.4);
+  transition: all 0.4s ease-in-out;
+  &--small{
+    /* only add hover effect to small pin modules*/
+    &:hover{
+      cursor: pointer;
+      transform: translateY(2.8px);
+      .pin-card__title{
+        background:rgba(137, 137, 137, 0.7);
+        color: #fff;
+      }
+    }
+  }
+  &--wide{
+    width: 50%;
+  }
+  &__title{
+    width: 100%;
+    padding: .5em;
+    border-bottom:1px solid rgba(137, 137, 137, 0.7);
+    transition: all 0.4s ease-in-out;
+    &--bottom-caption{
+      border: none;
+    }
+  }
+  &__content{
+    text-align: center;
+    padding:.8em;
+    &--left-align{
+      text-align: left;
+    }
+  }
+  &__image{
+    display: inline-block;
+    height: 200px;
+    width: 70%;
+    background: url('http://www.thebrofessional.net/wp-content/uploads/2014/09/Allison-Stokke-01.jpg');
+    background-size: cover;
+  }
+  &__text{
+    display: inline-block;
+    &--left-align{
+      text-align: left;
+    }
+  }
+  &__status{
+    width: 100%;
+    padding: .5em;
+    border-top:1px solid rgba(137, 137, 137, 0.7);
+  }
+  &__icon{
+    color: rgba(137, 137, 137, 0.9);
+  }
+}

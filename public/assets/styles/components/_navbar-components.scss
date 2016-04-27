@@ -1,0 +1,45 @@
+.nav{
+  width: 100%;
+  background: transparentize(blue,0.2);
+  padding: .5em;
+  &__brand{
+    display: inline-block;
+    padding: 1em;
+    text-align: center;
+  }
+  &:after{
+    content: "";
+    display: table;
+    clear:both;
+  }
+  &__hamburger{
+    display: none;
+    color:white;
+    padding: 1em;
+    @media screen and (max-width:520px){
+      display: block;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+.menu{
+  display: inline-block;
+  float: right;
+  &__item{
+    display: inline;
+    padding: .3em;
+    &:not(:last-child){
+      margin-right: 1.1em;
+    }
+    &:hover{
+      border-bottom: 1px solid white;
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width:520px){
+    display:none;
+  }
+}
