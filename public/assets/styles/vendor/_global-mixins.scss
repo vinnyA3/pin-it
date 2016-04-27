@@ -4,13 +4,13 @@ $breakpoints: (
   'xs': 320px,
   'sm': 480px,
   'md': 600px,
-  'lg': 768px,
+  'lg': 700px,
   'lg-plus': 900px,
-  'xl': 1024px,
+  'xl': 1150px,
   'xx': 1200px,
 );
 /* Media Break Mixin*/
-@mixin break(){
+@mixin break($size){
   @media screen and (min-width: map-get($breakpoints, $size)){
     @content;
   }
