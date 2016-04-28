@@ -14,5 +14,11 @@
     @include break(xl) {
       width: 25%;
     }
+    //medium flex item
+    &--md{
+      @include break(lg) {
+        width: 50%;
+      }
+    }
   }
 }
