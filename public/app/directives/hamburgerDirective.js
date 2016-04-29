@@ -5,19 +5,17 @@ module.exports = function(app){
       template:require('../views/partials/navbarPartial.html'),
       replace:true,
       link:function(scope,element,attrs){
-        /*refactor to see fit
-        var mainView = element.parent().parent().parent(),
-            mainDiv = element.parent().parent(),
-            nav = mainView[0].querySelector('.drawer-nav');*/
-
+        //main div/body/document, and megadropdown
+        var doc = element.parent().parent().parent(),
+            dropdown = element.parent().children()[1];
+        console.log(doc);
         element.on('click',function(e){
-        //  nav.classList.toggle('js-drawer-nav-open');
-          alert('clicked');
+          dropdown.classList.toggle('is-active');
           e.stopPropagation();
         });
-        /*mainDiv.on('click', function(){
-          nav.classList.remove('js-drawer-nav-open');
-        })*/
+        doc.on('click', function(){
+          dropdown.classList.remove('is-active');
+        });
       }
     }
   }]);
