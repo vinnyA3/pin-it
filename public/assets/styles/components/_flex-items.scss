@@ -16,10 +16,15 @@
     }
     //medium flex item
     &--md{
+    width: 100%;
       padding: 1em;
       @include break(lg) {
         width: 50%;
       }
+    }
+    &--lg{
+      padding: 1em;
+      width: 100%
     }
   }
 }
