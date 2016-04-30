@@ -12,23 +12,6 @@
     display:inline-block;
     font-weight: bold;
   }
-  &__input{
-    width: 100%;
-    border:1px solid gray;
-    border-radius: 2px;
-    padding:.3em;
-    margin-bottom: .5em;
-  }
-  &__btn{
-    background: transparentize(blue,0.2);
-    border:none;
-    border-radius: 2px;
-    padding: .3em .5em .3em .5em;
-    color:white;
-    &:focus{
-      outline: none;
-    }
-  }
   &:after{
     content:'';
     position: absolute;
