@@ -1,0 +1,17 @@
+.btn{
+  padding:.5em .8em .5em .8em;
+  text-align: center;
+  border-radius: 2px;
+  border:none;
+  &:focus{
+    outline: none;
+  }
+  &--primary{
+    color: #fff;
+    background: transparentize(blue,0.2);
+    &:hover{
+      background: transparentize(blue, 0.1);
+      cursor: pointer;
+    }
+  }
+}
