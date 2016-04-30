@@ -2,7 +2,7 @@ module.exports = function(app){
   app.directive('modalDialog', [function(){
     return{
       restrict: 'AEC',
-      templateUrl: '../views/partials/modalView.html',
+      template: require('../views/partials/modalView.html'),
       scope:{
         show: '='
       },
