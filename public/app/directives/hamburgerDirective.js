@@ -2,7 +2,7 @@ module.exports = function(app){
   app.directive('navbarToggle',[function(){
     return {
       restrict:'E',
-      template:require('../views/partials/navbarPartial.html'),
+      template:require('../views/partials/navHamburger.html'),
       replace:true,
       link:function(scope,element,attrs){
         //main div/body/document, and megadropdown
