@@ -38,6 +38,15 @@
                </ul>
             </div><!--end nav-->
          </header><!--end header-->
+
+         <modal-dialog show='user.modalShown' height='auto'>
+            <br>Request: {{user.requestedBook.title}}<br><br>
+            <label for="swap-for">Swap for:
+              &nbsp;<input type="text" ng-model="user.swapTitle" placeholder="Your book title to swap"> </input><br><br>
+            </label>
+            <input class="ng-modal-submit" ng-click="user.sendBookRequest()" type="submit"> </input>
+         </modal-dialog>
+
          <!--UI VIEW/ Content-->
          <div class="content" ui-view></div>
          <!--end content-->
