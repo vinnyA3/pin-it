@@ -80,28 +80,15 @@ exports.delete_comment = function(req,res){
 
 exports.vote = function(req,res){
   var post_id = req.params.post_id;
-  if(req.body.upvote){
+
     Post.update({'_id': post_id},
-         {$inc: {'upvotes': 1}},
+         {$inc: {'loves': 1}},
          function(err){
            if(err){
              return res.send(err);
            }
            return res.send({success: true, message: 'Post upvoted!'});
          });
-  }else if(req.body.downvote){
-    Post.update({'_id': post_id},
-         {$inc: {'downvotes': 1}},
-         function(err){
-           if(err){
-             return res.send(err);
-           }
-           return res.send({success: true, message: 'Post downvoted...boo!'});
-         });
-  }else{
-    //do nothing ... as of now
-    return;
-  }
 };
 
 exports.create_post = function(req,res){
