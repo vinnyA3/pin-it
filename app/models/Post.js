@@ -7,8 +7,7 @@ var PostSchema = mongoose.Schema({
   img_link: String,
   description: String,
   comments: [{type: mongoose.SchemaTypes.ObjectId, ref:'Comment'}],
-  upvotes: Number,
-  downvotes: Number
+  loves: Number
 });
 
 PostSchema.pre('remove', function(next){
